@@ -701,10 +701,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee6781c74d145e4baeee8bb4051b369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dineroPerCiclo: 2
-  tiempoCiclo: 2
-  barraProgreso: {fileID: 164461192}
-  textDinero: {fileID: 1096564923}
+  idProducto: producto_0
+  dineroPerCiclo: 5
+  tiempoCiclo: 5
+  nivel: 0
+  barraProgreso: {fileID: 0}
+  textDinero: {fileID: 0}
+  timerActual: 0
   desbloqueada: 0
 --- !u!1 &431552286
 GameObject:
@@ -1050,6 +1053,7 @@ GameObject:
   - component: {fileID: 576894334}
   - component: {fileID: 576894333}
   - component: {fileID: 576894335}
+  - component: {fileID: 576894336}
   m_Layer: 5
   m_Name: GameManager
   m_TagString: Untagged
@@ -1102,6 +1106,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dinero: 0
+  dineroTotal: 0
+  clickPower: 1
+  prestigeMultiplicador: 1
+  nivel: 1
   textDinero: {fileID: 1096564923}
   parcelas:
   - {fileID: 388089479}
@@ -1137,6 +1145,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uid: 
   idToken: 
+--- !u!114 &576894336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576894331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e66519b2de7c64d9c1acc23bc42dca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &581314221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,10 +1751,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee6781c74d145e4baeee8bb4051b369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dineroPerCiclo: 15
-  tiempoCiclo: 10
+  idProducto: producto_3
+  dineroPerCiclo: 35
+  tiempoCiclo: 18
+  nivel: 0
   barraProgreso: {fileID: 509574866}
   textDinero: {fileID: 1096564923}
+  timerActual: 0
   desbloqueada: 0
 --- !u!1 &1079670490
 GameObject:
@@ -1870,10 +1893,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee6781c74d145e4baeee8bb4051b369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dineroPerCiclo: 10
-  tiempoCiclo: 6
+  idProducto: producto_2
+  dineroPerCiclo: 20
+  tiempoCiclo: 12
+  nivel: 0
   barraProgreso: {fileID: 272091691}
   textDinero: {fileID: 1096564923}
+  timerActual: 0
   desbloqueada: 0
 --- !u!1 &1096564922
 GameObject:
@@ -2279,10 +2305,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee6781c74d145e4baeee8bb4051b369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dineroPerCiclo: 50
-  tiempoCiclo: 25
+  idProducto: producto_5
+  dineroPerCiclo: 100
+  tiempoCiclo: 35
+  nivel: 0
   barraProgreso: {fileID: 1527592401}
   textDinero: {fileID: 1096564923}
+  timerActual: 0
   desbloqueada: 0
 --- !u!1 &1390630361
 GameObject:
@@ -2418,10 +2447,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee6781c74d145e4baeee8bb4051b369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dineroPerCiclo: 5
-  tiempoCiclo: 4
+  idProducto: producto_1
+  dineroPerCiclo: 10
+  tiempoCiclo: 8
+  nivel: 0
   barraProgreso: {fileID: 581314223}
   textDinero: {fileID: 1096564923}
+  timerActual: 0
   desbloqueada: 0
 --- !u!1 &1412052282
 GameObject:
@@ -2892,10 +2924,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee6781c74d145e4baeee8bb4051b369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dineroPerCiclo: 150
-  tiempoCiclo: 60
+  idProducto: producto_8
+  dineroPerCiclo: 1000
+  tiempoCiclo: 240
+  nivel: 0
   barraProgreso: {fileID: 753449458}
   textDinero: {fileID: 1096564923}
+  timerActual: 0
   desbloqueada: 0
 --- !u!1 &1881566258
 GameObject:
@@ -3179,10 +3214,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee6781c74d145e4baeee8bb4051b369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dineroPerCiclo: 60
-  tiempoCiclo: 30
+  idProducto: producto_6
+  dineroPerCiclo: 200
+  tiempoCiclo: 60
+  nivel: 0
   barraProgreso: {fileID: 1613617525}
   textDinero: {fileID: 1096564923}
+  timerActual: 0
   desbloqueada: 0
 --- !u!1 &1977007090
 GameObject:
@@ -3318,10 +3356,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee6781c74d145e4baeee8bb4051b369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dineroPerCiclo: 100
-  tiempoCiclo: 50
+  idProducto: producto_7
+  dineroPerCiclo: 500
+  tiempoCiclo: 120
+  nivel: 0
   barraProgreso: {fileID: 774918169}
   textDinero: {fileID: 1096564923}
+  timerActual: 0
   desbloqueada: 0
 --- !u!1 &2025503058
 GameObject:
@@ -3532,10 +3573,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee6781c74d145e4baeee8bb4051b369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dineroPerCiclo: 25
-  tiempoCiclo: 15
+  idProducto: producto_4
+  dineroPerCiclo: 60
+  tiempoCiclo: 25
+  nivel: 0
   barraProgreso: {fileID: 843260009}
   textDinero: {fileID: 1096564923}
+  timerActual: 0
   desbloqueada: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
