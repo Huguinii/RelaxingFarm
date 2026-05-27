@@ -203,6 +203,12 @@ public class SaveManager : MonoBehaviour
                         string numStr = parcela.idProducto.Replace("producto_", "");
                         if (int.TryParse(numStr, out int prodIdx) && prodIdx < tiemposProd.Length)
                             parcela.tiempoCiclo = tiemposProd[prodIdx];
+
+                        // Actualizar la visibilidad del CanvasGroup según el estado cargado.
+                        // Es necesario llamarlo explícitamente porque los campos se asignan
+                        // de forma directa (sin pasar por Desbloquear()), por lo que el
+                        // CanvasGroup no se actualiza automáticamente durante la carga.
+                        parcela.ActualizarVisibilidad();
                     }
                 }
 
@@ -296,7 +302,7 @@ public class SaveManager : MonoBehaviour
 
         // 3. Actualizar el ranking global del jugador en /rankings/{uid}
         string urlRanking  = $"{DB_URL}/rankings/{FirebaseManager.Instance.uid}.json?auth={FirebaseManager.Instance.idToken}";
-        string jsonRanking = $"{{\"nombreUsuario\":\"{PlayerPrefs.GetString("username")}","
+        string jsonRanking = $"{{\"nombreUsuario\":\"{PlayerPrefs.GetString("username")}\","
                            + $"\"dineroTotal\":{GameManager.Instance.dineroTotal.ToString(CultureInfo.InvariantCulture)},"
                            + $"\"nivel\":{GameManager.Instance.nivel}}}";
         yield return EnviarPatch(urlRanking, jsonRanking, null);
